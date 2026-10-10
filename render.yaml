@@ -1,0 +1,41 @@
+# ================================================
+# Render Infrastructure Blueprint — Kairos App
+# ================================================
+services:
+  # ----------------------------------------------
+  # Spring Boot Backend (Docker Web Service)
+  # ----------------------------------------------
+  - type: web
+    name: kairos-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: singapore # Options: oregon, frankfurt, singapore, ohio
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: SPRING_DATASOURCE_URL
+        sync: false # Set in Render dashboard (e.g. jdbc:mysql://YOUR_MYSQL_HOST:3306/kairos_db?createDatabaseIfNotExist=true&useSSL=false)
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false # Set in Render dashboard (e.g. root)
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false # Set in Render dashboard
+      - key: JWT_SECRET
+        sync: false # Set a secure 64+ char random hex string in Render dashboard
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://kairos-frontend.onrender.com,http://localhost:5173
+
+  # ----------------------------------------------
+  # React Frontend (Static Site)
+  # ----------------------------------------------
+  - type: web
+    name: kairos-frontend
+    runtime: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    autoDeploy: true
+    envVars:
+      - key: VITE_API_URL
+        value: https://kairos-backend.onrender.com/api

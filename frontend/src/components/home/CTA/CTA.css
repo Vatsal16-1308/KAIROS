@@ -1,0 +1,56 @@
+.cta{
+
+    max-width:1300px;
+
+    margin:90px auto;
+
+    padding:70px 30px;
+
+    border-radius:25px;
+
+    background:linear-gradient(135deg,#8B5CF6,#6D28D9);
+
+    text-align:center;
+}
+
+.cta h2{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+}
+
+.cta p{
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+    color:#f3f3f3;
+}
+
+.cta button{
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#6D28D9;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.cta button:hover{
+
+    transform:scale(1.05);
+}

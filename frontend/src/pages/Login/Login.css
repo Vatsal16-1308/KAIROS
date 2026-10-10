@@ -1,0 +1,131 @@
+.login-page{
+    min-height:calc(100vh - 80px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: var(--bg-primary);
+    padding:20px;
+}
+
+.login-card{
+    width:100%;
+    max-width:420px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius:16px;
+    padding:40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.login-card h1{
+    color: var(--text-primary);
+    text-align:center;
+    margin-bottom:10px;
+    font-size: 32px;
+}
+
+.login-card p{
+    color: var(--text-secondary);
+    text-align:center;
+    margin-bottom:30px;
+    font-size: 15px;
+}
+
+.login-card form{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.login-card input{
+    padding:14px;
+    border: 1px solid var(--border);
+    border-radius:10px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size:15px;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.login-card input:focus{
+    border-color: var(--primary);
+}
+
+.login-card button[type="submit"]{
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background: var(--primary);
+    color:white;
+    font-size:16px;
+    font-weight: 600;
+    cursor:pointer;
+    transition: 0.25s ease;
+}
+
+.login-card button[type="submit"]:hover{
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.login-card button[type="submit"]:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.demo-accounts-box {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--border);
+    text-align: center;
+}
+
+.demo-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.demo-chips {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.demo-chip {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.demo-chip:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.register-text{
+    margin-top:25px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.register-text a{
+    color: var(--primary);
+    text-decoration:none;
+    font-weight: 600;
+}
+
+.register-text a:hover{
+    text-decoration: underline;
+}

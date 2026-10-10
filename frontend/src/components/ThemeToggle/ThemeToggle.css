@@ -1,0 +1,21 @@
+.theme-toggle{
+    width:46px;
+    height:46px;
+    border:none;
+    border-radius:50%;
+    background:var(--bg-card);
+    color:var(--text-primary);
+    font-size:20px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 4px 12px var(--shadow);
+    transition:0.3s ease;
+}
+
+.theme-toggle:hover{
+    transform:scale(1.08);
+    background:var(--primary);
+    color:white;
+}

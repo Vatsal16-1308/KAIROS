@@ -1,0 +1,130 @@
+.register-page{
+    min-height:calc(100vh - 80px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: var(--bg-primary);
+    padding:30px 20px;
+}
+
+.register-card{
+    width:100%;
+    max-width:480px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding:40px;
+    border-radius:16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.register-card h1{
+    color: var(--text-primary);
+    text-align:center;
+    margin-bottom:10px;
+    font-size: 32px;
+}
+
+.register-card p{
+    color: var(--text-secondary);
+    text-align:center;
+    margin-bottom:25px;
+    font-size: 15px;
+}
+
+.register-card form{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.role-selector-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.role-selector-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.role-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.role-tab {
+    padding: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.role-tab.active {
+    border-color: var(--primary);
+    background: rgba(0, 184, 148, 0.12);
+    color: var(--primary);
+}
+
+.register-card input{
+    padding:14px;
+    border: 1px solid var(--border);
+    border-radius:10px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 15px;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.register-card input:focus{
+    border-color: var(--primary);
+}
+
+.register-card button[type="submit"]{
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background: var(--primary);
+    color:white;
+    cursor:pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 6px;
+    transition: 0.25s ease;
+}
+
+.register-card button[type="submit"]:hover{
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.register-card button[type="submit"]:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.login-text {
+    margin-top: 25px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.login-text a{
+    color: var(--primary);
+    text-decoration:none;
+    font-weight: 600;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,33 @@
+# ─── Old folder names (renamed to frontend/backend) ───
+client/
+server/
+
+# ─── Node / Frontend ───
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env*.local
+
+# ─── Maven / Backend ───
+backend/target/
+backend/.env
+*.class
+*.jar
+*.war
+
+# ─── IDE / OS ───
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+.vscode/
+
+# ─── Logs ───
+*.log
+logs/
+
+# ─── Environment / Secrets ───
+.env
+.env.local
+*.env
